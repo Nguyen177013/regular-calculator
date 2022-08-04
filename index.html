@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+        <main>
+            <div id="calculator-main">
+                <div class="option">
+                    <label class="switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                      </label>
+                </div>
+                <div class="main-board">
+                    <div class="previous-calc">
+                       
+                    </div>
+                    <div class="current-calc">
+                          
+                    </div>
+                </div>
+                <div class="calc-button">
+                    <button class="btn all-clear" onclick="clearAll();">C</button>
+                    <button class="btn percent" onclick="percent()">%</button>
+                    <button class="btn remove" onclick="sliceLast();"><i class="fa-solid fa-delete-left"></i></button>
+                    <button class="amt divide" onclick="divide();">÷</button>
+            
+                    <button class="number" onclick="display(this)">7</button>
+                    <button class="number" onclick="display(this)">8</button>
+                    <button class="number" onclick="display(this)">9</button>
+                    <button class="amt times" onclick = "time();">X</button>
+            
+                    <button class="number" onclick="display(this)">4</button>
+                    <button class="number" onclick="display(this)">5</button>
+                    <button class="number" onclick="display(this)">6</button>
+                    <button class="amt minus" onclick = "minus();">-</button>
+            
+                    <button class="number" onclick="display(this)">1</button>
+                    <button class="number" onclick="display(this)">2</button>
+                    <button class="number" onclick="display(this)">3</button>
+                    <button class="amt plus" onclick="plus()">+</button>
+            
+                    <button class="number num-0" onclick="display(this)">0</button>
+                    <button class="number num-0">00</button>
+                    <button id="dot" onclick="dot();">.</button>
+                    <button id="result" onclick="result();">=</button>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+</body>
+</html>

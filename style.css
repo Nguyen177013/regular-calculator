@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "DungGeunMo";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    height:  100vh;
+}
+body{
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calculator-main{
+    border-radius: 0.8rem;
+    height: 70rem;
+    width: 38rem;
+    background-color: #64686b;
+    box-shadow: 5px 5px 10px #928d8d, -5px -5px 10px #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: all 1s;
+}
+.option{
+    flex:1
+}
+.calc-button{
+    height: 5rem;
+    flex: 3;
+    padding: 2rem; 
+}
+/* checkbox slider */
+.switch {
+    display: inline-block;
+    height: 3.4rem;
+    position: relative;
+    width: 8rem;
+    
+}
+.switch input{
+    display: none;
+}  
+.slider {
+    background-color: #000;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+.slider:before {
+    background-color: #f5b150;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+input:checked + .slider{
+    background-color: #f5b150;
+}
+input:checked + .slider::before{
+    background-color: #64686b;
+    transform: translateX(4.5rem);
+}
+.slider.round {
+    border-radius: 3rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* Main Board */
+.main-board{
+    /* background-color: #fff; */
+    height: 5rem;
+    flex: 4;
+    position: relative;
+}
+.current-calc , .previous-calc{
+    position: absolute;
+    font-family: "DungGeunMo";
+    color:#f5b150;
+}
+.current-calc{
+    bottom: 1.5em;
+    right: 2rem;
+    font-size: 5rem;
+}
+.previous-calc{
+    right: 2rem;
+    font-size: 2.5rem;
+    opacity: 0.5;
+    bottom: 18rem;
+}
+
+
+/* Calculator Button*/
+.calc-button{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.calc-button button{
+    flex-basis: 25%;
+    background-color: transparent;
+    border: none;
+    margin: 2px 0;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.calc-button button:hover{
+    background-color: #aeaeae;
+}
+.calc-button button{
+    font-size: 1.8rem;
+}
+.calc-button .divide,
+.minus{
+    font-size: 2rem;
+}
+  
